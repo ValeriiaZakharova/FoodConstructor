@@ -13,6 +13,10 @@
 		CF423AC12404FB9200FFAB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF423ABF2404FB9200FFAB12 /* Main.storyboard */; };
 		CF423AC32404FB9800FFAB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF423AC22404FB9800FFAB12 /* Assets.xcassets */; };
 		CF423AC62404FB9800FFAB12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF423AC42404FB9800FFAB12 /* LaunchScreen.storyboard */; };
+		CF423AD124053FC000FFAB12 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD024053FC000FFAB12 /* FoodModel.swift */; };
+		CF423AD3240541A900FFAB12 /* StorageFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD2240541A900FFAB12 /* StorageFood.swift */; };
+		CF423AD52405A2FE00FFAB12 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD42405A2FE00FFAB12 /* MealModel.swift */; };
+		CF423AD72405A31A00FFAB12 /* StorageMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD62405A31A00FFAB12 /* StorageMeal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		CF423AC22404FB9800FFAB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF423AC52404FB9800FFAB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF423AC72404FB9800FFAB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF423AD024053FC000FFAB12 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		CF423AD2240541A900FFAB12 /* StorageFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFood.swift; sourceTree = "<group>"; };
+		CF423AD42405A2FE00FFAB12 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
+		CF423AD62405A31A00FFAB12 /* StorageMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMeal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		CF423AB82404FB9200FFAB12 /* FoodConstructor */ = {
 			isa = PBXGroup;
 			children = (
+				CF423ACD24050B5F00FFAB12 /*  Models */,
 				CF423AB92404FB9200FFAB12 /* AppDelegate.swift */,
 				CF423ABB2404FB9200FFAB12 /* SceneDelegate.swift */,
 				CF423ABD2404FB9200FFAB12 /* ViewController.swift */,
@@ -65,6 +74,33 @@
 				CF423AC72404FB9800FFAB12 /* Info.plist */,
 			);
 			path = FoodConstructor;
+			sourceTree = "<group>";
+		};
+		CF423ACD24050B5F00FFAB12 /*  Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF423ACE24053F5700FFAB12 /* FoodModel */,
+				CF423ACF24053F7600FFAB12 /* MealModel */,
+			);
+			path = " Models";
+			sourceTree = "<group>";
+		};
+		CF423ACE24053F5700FFAB12 /* FoodModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF423AD024053FC000FFAB12 /* FoodModel.swift */,
+				CF423AD2240541A900FFAB12 /* StorageFood.swift */,
+			);
+			path = FoodModel;
+			sourceTree = "<group>";
+		};
+		CF423ACF24053F7600FFAB12 /* MealModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF423AD42405A2FE00FFAB12 /* MealModel.swift */,
+				CF423AD62405A31A00FFAB12 /* StorageMeal.swift */,
+			);
+			path = MealModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF423ABE2404FB9200FFAB12 /* ViewController.swift in Sources */,
+				CF423AD124053FC000FFAB12 /* FoodModel.swift in Sources */,
 				CF423ABA2404FB9200FFAB12 /* AppDelegate.swift in Sources */,
 				CF423ABC2404FB9200FFAB12 /* SceneDelegate.swift in Sources */,
+				CF423AD72405A31A00FFAB12 /* StorageMeal.swift in Sources */,
+				CF423AD52405A2FE00FFAB12 /* MealModel.swift in Sources */,
+				CF423AD3240541A900FFAB12 /* StorageFood.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
