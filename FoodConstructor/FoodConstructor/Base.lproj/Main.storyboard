@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uWk-eH-M0Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uWk-eH-M0Q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -127,15 +127,30 @@
         <!--Create Template-->
         <scene sceneID="uv6-zK-zs0">
             <objects>
-                <viewController id="Hp1-nk-Vmb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodListViewController" id="Hp1-nk-Vmb" customClass="FoodListViewController" customModule="FoodConstructor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CT5-kj-yvQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h8Y-gu-bQQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QW9-6x-ioh" firstAttribute="trailing" secondItem="h8Y-gu-bQQ" secondAttribute="trailing" id="4Ad-js-2Ex"/>
+                            <constraint firstItem="h8Y-gu-bQQ" firstAttribute="leading" secondItem="QW9-6x-ioh" secondAttribute="leading" id="HzB-kl-TyT"/>
+                            <constraint firstItem="QW9-6x-ioh" firstAttribute="bottom" secondItem="h8Y-gu-bQQ" secondAttribute="bottom" id="Kxv-2s-D0B"/>
+                            <constraint firstItem="h8Y-gu-bQQ" firstAttribute="top" secondItem="QW9-6x-ioh" secondAttribute="top" id="aXE-op-2uJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QW9-6x-ioh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Template" id="AYm-Bv-2Ck"/>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="tableView" destination="h8Y-gu-bQQ" id="Dft-P8-R1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSm-fT-o9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
