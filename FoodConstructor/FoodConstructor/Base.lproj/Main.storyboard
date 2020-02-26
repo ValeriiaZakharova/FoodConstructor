@@ -135,6 +135,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h8Y-gu-bQQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hp1-nk-Vmb" id="3IE-zR-tPg"/>
+                                    <outlet property="delegate" destination="Hp1-nk-Vmb" id="vex-NW-xSg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -146,7 +150,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QW9-6x-ioh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Template" id="AYm-Bv-2Ck"/>
+                    <navigationItem key="navigationItem" title="Create Template" id="AYm-Bv-2Ck">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wG6-hh-N9K">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="tkI-uU-id5" kind="show" id="kG2-Ym-yOs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="tableView" destination="h8Y-gu-bQQ" id="Dft-P8-R1u"/>
@@ -155,6 +166,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSm-fT-o9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-739" y="731"/>
+        </scene>
+        <!--Add New Product View Controller-->
+        <scene sceneID="UYW-Qi-dmM">
+            <objects>
+                <viewController storyboardIdentifier="AddNewProductViewController" id="tkI-uU-id5" customClass="AddNewProductViewController" customModule="FoodConstructor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="32m-cG-v3V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4P4-uT-HwH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oja-Iy-VuS">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Oja-Iy-VuS" firstAttribute="height" secondItem="4P4-uT-HwH" secondAttribute="height" id="71o-iL-IJK"/>
+                                    <constraint firstItem="Oja-Iy-VuS" firstAttribute="top" secondItem="4P4-uT-HwH" secondAttribute="top" id="EkE-kr-LkX"/>
+                                    <constraint firstItem="Oja-Iy-VuS" firstAttribute="centerX" secondItem="4P4-uT-HwH" secondAttribute="centerX" id="SFt-Jp-31Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oja-Iy-VuS" secondAttribute="trailing" id="VnC-sB-Fm2"/>
+                                    <constraint firstItem="Oja-Iy-VuS" firstAttribute="leading" secondItem="4P4-uT-HwH" secondAttribute="leading" id="W7Z-dp-o2P"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oja-Iy-VuS" secondAttribute="bottom" id="xqb-6G-U0y"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4P4-uT-HwH" firstAttribute="top" secondItem="YN6-7E-yBN" secondAttribute="top" id="1Er-W4-prM"/>
+                            <constraint firstItem="YN6-7E-yBN" firstAttribute="trailing" secondItem="4P4-uT-HwH" secondAttribute="trailing" id="2ee-Hy-ps2"/>
+                            <constraint firstItem="4P4-uT-HwH" firstAttribute="leading" secondItem="YN6-7E-yBN" secondAttribute="leading" id="LC8-0f-KC3"/>
+                            <constraint firstItem="YN6-7E-yBN" firstAttribute="bottom" secondItem="4P4-uT-HwH" secondAttribute="bottom" id="a2d-BF-AFi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YN6-7E-yBN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dP0-Fs-bql"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ur-Cy-qbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738" y="1435"/>
         </scene>
         <!--Profile-->
         <scene sceneID="UTX-u7-z8z">

@@ -18,6 +18,9 @@
 		CF423AD52405A2FE00FFAB12 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD42405A2FE00FFAB12 /* MealModel.swift */; };
 		CF423AD72405A31A00FFAB12 /* StorageMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD62405A31A00FFAB12 /* StorageMeal.swift */; };
 		CF423AD92406915E00FFAB12 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD82406915E00FFAB12 /* FoodListViewController.swift */; };
+		CF423ADE2406953900FFAB12 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423ADC2406953900FFAB12 /* FoodCell.swift */; };
+		CF423ADF2406953900FFAB12 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF423ADD2406953900FFAB12 /* FoodCell.xib */; };
+		CF423AE22406B78C00FFAB12 /* AddNewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AE12406B78C00FFAB12 /* AddNewProductViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		CF423AD42405A2FE00FFAB12 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		CF423AD62405A31A00FFAB12 /* StorageMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMeal.swift; sourceTree = "<group>"; };
 		CF423AD82406915E00FFAB12 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
+		CF423ADC2406953900FFAB12 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		CF423ADD2406953900FFAB12 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
+		CF423AE12406B78C00FFAB12 /* AddNewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		CF423AB82404FB9200FFAB12 /* FoodConstructor */ = {
 			isa = PBXGroup;
 			children = (
+				CF423AE02406B75100FFAB12 /* AddNewProductViewController */,
 				CF423ADA2406928A00FFAB12 /* FoodListViewController */,
 				CF423ACD24050B5F00FFAB12 /*  Models */,
 				CF423AB92404FB9200FFAB12 /* AppDelegate.swift */,
@@ -109,9 +116,27 @@
 		CF423ADA2406928A00FFAB12 /* FoodListViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CF423ADB2406950F00FFAB12 /* foodCell */,
 				CF423AD82406915E00FFAB12 /* FoodListViewController.swift */,
 			);
 			path = FoodListViewController;
+			sourceTree = "<group>";
+		};
+		CF423ADB2406950F00FFAB12 /* foodCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF423ADC2406953900FFAB12 /* FoodCell.swift */,
+				CF423ADD2406953900FFAB12 /* FoodCell.xib */,
+			);
+			path = foodCell;
+			sourceTree = "<group>";
+		};
+		CF423AE02406B75100FFAB12 /* AddNewProductViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF423AE12406B78C00FFAB12 /* AddNewProductViewController.swift */,
+			);
+			path = AddNewProductViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF423AC62404FB9800FFAB12 /* LaunchScreen.storyboard in Resources */,
+				CF423ADF2406953900FFAB12 /* FoodCell.xib in Resources */,
 				CF423AC32404FB9800FFAB12 /* Assets.xcassets in Resources */,
 				CF423AC12404FB9200FFAB12 /* Main.storyboard in Resources */,
 			);
@@ -192,7 +218,9 @@
 				CF423ABC2404FB9200FFAB12 /* SceneDelegate.swift in Sources */,
 				CF423AD72405A31A00FFAB12 /* StorageMeal.swift in Sources */,
 				CF423AD52405A2FE00FFAB12 /* MealModel.swift in Sources */,
+				CF423ADE2406953900FFAB12 /* FoodCell.swift in Sources */,
 				CF423AD3240541A900FFAB12 /* StorageFood.swift in Sources */,
+				CF423AE22406B78C00FFAB12 /* AddNewProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

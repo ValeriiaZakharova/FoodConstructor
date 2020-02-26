@@ -40,7 +40,7 @@ struct StorageProduct {
         veal.category = .meat
         
         var chicken = Product()
-        chicken.name = "Veal"
+        chicken.name = "Chicken"
         chicken.weight = 100
         chicken.calorieСontent = 239
         chicken.carbs = 0.0
@@ -274,7 +274,7 @@ struct StorageProduct {
         feta.category = .cheese
         
         var rawEgg = Product()
-        rawEgg.name = "Egg"
+        rawEgg.name = "Raw egg"
         rawEgg.calorieСontent = 157
         rawEgg.weight = 100
         rawEgg.protein = 12.7
@@ -283,7 +283,7 @@ struct StorageProduct {
         rawEgg.category = .eggs
         
         var boiledEgg = Product()
-        boiledEgg.name = "Egg"
+        boiledEgg.name = "Boiled egg"
         boiledEgg.calorieСontent = 155
         boiledEgg.weight = 100
         boiledEgg.protein = 13.0
