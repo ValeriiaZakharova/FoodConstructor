@@ -8,31 +8,9 @@
 
 import Foundation
 
-struct StorageFood {
+struct StorageProduct {
     
-    func createProductCategories() -> [CategoryProduct] {
-        
-        let meatCategory = creatMeatCategory()
-        let vegetablesCategory = createVegetablesCategory()
-        let fruitCategory = createFruitCategory()
-        let groatsCategory = createGroatsCategory()
-        let fishCategory = createFishCategory()
-        let flourCategory = createFlourCategory()
-        let seaFoodCategory = createSeaFoodCategory()
-        let cheeseCategory = createCheeseCategory()
-        let eggsCategory = createEggsCategory()
-        let milkCategory = createMilkCategory()
-        let milkProductCategory = createMilkProductsCategory()
-        let mashroomCategory = createMashroomsCategory()
-        let nutsCategory = createNutsCategory()
-        let fatOilCategory = createFatOilCategory()
-        let juiceFrashCategory = createJuiceCategory()
-        let otherCategory = createOtherCategory()
-        
-        return [meatCategory, vegetablesCategory, fruitCategory, groatsCategory, fishCategory, flourCategory, seaFoodCategory, cheeseCategory, eggsCategory, milkCategory, milkProductCategory, mashroomCategory, nutsCategory, fatOilCategory, juiceFrashCategory, otherCategory]
-    }
-    
-    func creatMeatCategory() -> CategoryProduct {
+    func createProducts() -> [Product] {
         
         var beef = Product()
         beef.name = "Beef"
@@ -41,6 +19,7 @@ struct StorageFood {
         beef.protein = 26.0
         beef.carbs = 0.0
         beef.fat = 15.0
+        beef.category = .meat
         
         var pork = Product()
         pork.name = "Pork"
@@ -49,6 +28,7 @@ struct StorageFood {
         pork.carbs = 0.8
         pork.fat = 7
         pork.protein = 19
+        pork.category = .meat
         
         var veal = Product()
         veal.name = "Veal"
@@ -57,6 +37,7 @@ struct StorageFood {
         veal.carbs = 0.0
         veal.fat = 7.0
         veal.protein = 24.0
+        veal.category = .meat
         
         var chicken = Product()
         chicken.name = "Veal"
@@ -65,13 +46,7 @@ struct StorageFood {
         chicken.carbs = 0.0
         chicken.fat = 14.0
         chicken.protein = 27.0
-        
-        let meatCategory = CategoryProduct(name: "Meat", products: [beef, pork, veal, chicken])
-        
-        return meatCategory
-    }
-    
-    func createVegetablesCategory() -> CategoryProduct {
+        chicken.category = .meat
         
         var cucumber = Product()
         cucumber.name = "Cucumber"
@@ -80,6 +55,7 @@ struct StorageFood {
         cucumber.carbs = 2.8
         cucumber.fat = 0.1
         cucumber.protein = 0.8
+        cucumber.category = .vegetables
         
         var tomato = Product()
         tomato.name = "Tomato"
@@ -88,6 +64,7 @@ struct StorageFood {
         tomato.carbs = 3.7
         tomato.fat = 0.2
         tomato.protein = 1.1
+        tomato.category = .vegetables
         
         var squash = Product()
         squash.name = "Squash"
@@ -96,6 +73,7 @@ struct StorageFood {
         squash.carbs = 4.6
         squash.fat = 0.3
         squash.protein = 0.6
+        squash.category = .vegetables
         
         var cabbage = Product()
         cabbage.name = "Cabbage"
@@ -104,13 +82,7 @@ struct StorageFood {
         cabbage.carbs = 6
         cabbage.fat = 0.1
         cabbage.protein = 1.3
-        
-        let vegetablesCategory = CategoryProduct(name: "Vegetables", products: [cucumber, tomato, squash, cabbage])
-        
-        return vegetablesCategory
-    }
-    
-    func createFruitCategory() -> CategoryProduct {
+        cabbage.category = .vegetables
         
         var orange = Product()
         orange.name = "Orange"
@@ -119,6 +91,7 @@ struct StorageFood {
         orange.protein = 0.9
         orange.fat = 0.2
         orange.carbs = 8.1
+        orange.category = .fruit
         
         var banana = Product()
         banana.name = "Banana"
@@ -127,6 +100,7 @@ struct StorageFood {
         banana.protein = 1.1
         banana.fat = 0.3
         banana.carbs = 23.0
+        banana.category = .fruit
         
         var kiwi = Product()
         kiwi.name = "Kiwi"
@@ -135,6 +109,7 @@ struct StorageFood {
         kiwi.protein = 1.1
         kiwi.fat = 0.5
         kiwi.carbs = 15.0
+        kiwi.category = .fruit
         
         var grapefruit = Product()
         grapefruit.name = "Grapefruit"
@@ -143,13 +118,7 @@ struct StorageFood {
         grapefruit.protein = 0.8
         grapefruit.fat = 0.1
         grapefruit.carbs = 11.0
-        
-        let fruitCategory = CategoryProduct(name: "Fruit", products: [orange, banana, grapefruit, kiwi])
-        
-        return fruitCategory
-    }
-    
-    func createGroatsCategory() -> CategoryProduct {
+        grapefruit.category = .fruit
         
         var oatmeal = Product()
         oatmeal.name = "Oatmel"
@@ -158,6 +127,7 @@ struct StorageFood {
         oatmeal.protein = 10
         oatmeal.fat = 6
         oatmeal.carbs = 68
+        oatmeal.category = .groats
         
         var rice = Product()
         rice.name = "Rice"
@@ -166,6 +136,7 @@ struct StorageFood {
         rice.protein = 2.4
         rice.fat = 0.2
         rice.carbs = 29
+        rice.category = .groats
         
         var brawnRice = Product()
         brawnRice.name = "Brawn rice"
@@ -174,6 +145,7 @@ struct StorageFood {
         brawnRice.protein = 2.6
         brawnRice.fat = 0.9
         brawnRice.carbs = 23
+        brawnRice.category = .groats
         
         var buckwheat = Product()
         buckwheat.name = "Buckwheat"
@@ -182,13 +154,7 @@ struct StorageFood {
         buckwheat.protein = 12.6
         buckwheat.fat = 3.3
         buckwheat.carbs = 62.1
-        
-        let groatsCategory = CategoryProduct(name: "Groats", products: [oatmeal, rice, brawnRice, buckwheat])
-        
-        return groatsCategory
-    }
-    
-    func createFishCategory() -> CategoryProduct {
+        buckwheat.category = .groats
         
         var salmon = Product()
         salmon.name = "Salmon"
@@ -197,6 +163,7 @@ struct StorageFood {
         salmon.protein = 20.0
         salmon.fat = 13.0
         salmon.carbs = 0.0
+        salmon.category = .fish
         
         var forel = Product()
         forel.name = "Forel"
@@ -205,6 +172,7 @@ struct StorageFood {
         forel.protein = 19.2
         forel.fat = 2.1
         forel.carbs = 0.0
+        forel.category = .fish
         
         var tuna = Product()
         tuna.name = "Tuna"
@@ -213,6 +181,7 @@ struct StorageFood {
         tuna.protein = 29
         tuna.fat = 0.6
         tuna.carbs = 0.0
+        tuna.category = .fish
         
         var seaBass = Product()
         seaBass.name = "Sea Bass"
@@ -221,14 +190,7 @@ struct StorageFood {
         seaBass.protein = 17.7
         seaBass.fat = 1.8
         seaBass.carbs = 0.0
-        
-        
-        let fishCategory = CategoryProduct(name: "Fish", products: [salmon, forel, tuna, seaBass])
-        
-        return fishCategory
-    }
-    
-    func createFlourCategory() -> CategoryProduct {
+        seaBass.category = .fish
         
         var wheatFlour = Product()
         wheatFlour.name = "Wheat Flour"
@@ -237,6 +199,7 @@ struct StorageFood {
         wheatFlour.protein = 10.0
         wheatFlour.fat = 1.0
         wheatFlour.carbs = 76.0
+        wheatFlour.category = .flour
         
         var ryeFlour = Product()
         ryeFlour.name = "Rye Flour"
@@ -245,6 +208,7 @@ struct StorageFood {
         ryeFlour.protein = 11.0
         ryeFlour.fat = 13.0
         ryeFlour.carbs = 75.0
+        ryeFlour.category = .flour
         
         var riceFlour = Product()
         riceFlour.name = "Rice Flour"
@@ -253,13 +217,7 @@ struct StorageFood {
         riceFlour.protein = 6.0
         riceFlour.fat = 1.4
         riceFlour.carbs = 85.0
-        
-        let flourCategory = CategoryProduct(name: "Flour", products: [wheatFlour, ryeFlour, riceFlour])
-        
-        return flourCategory
-    }
-    
-    func createSeaFoodCategory() -> CategoryProduct {
+        riceFlour.category = .flour
         
         var shrimp = Product()
         shrimp.name = "Shrimp"
@@ -268,6 +226,7 @@ struct StorageFood {
         shrimp.protein = 18.9
         shrimp.fat = 2.2
         shrimp.carbs = 0.0
+        shrimp.category = .seaFood
         
         var squid = Product()
         squid.name = "Squid"
@@ -276,6 +235,7 @@ struct StorageFood {
         squid.protein = 18.9
         squid.fat = 7.0
         squid.carbs = 8.0
+        squid.category = .seaFood
         
         var mussels = Product()
         mussels.name = "Mussels"
@@ -284,13 +244,7 @@ struct StorageFood {
         mussels.protein = 18.9
         mussels.fat = 7.0
         mussels.carbs = 8.0
-        
-        let seaFoodCategory = CategoryProduct(name: "Sea Food", products: [shrimp, squid, mussels])
-        
-        return seaFoodCategory
-    }
-    
-    func createCheeseCategory() -> CategoryProduct {
+        mussels.category = .seaFood
         
         var brieCheese = Product()
         brieCheese.name = "Brie cheese"
@@ -299,7 +253,8 @@ struct StorageFood {
         brieCheese.protein = 21.0
         brieCheese.fat = 28.0
         brieCheese.carbs = 0.5
-       
+        brieCheese.category = .cheese
+        
         var camembert = Product()
         camembert.name = "Сamembert"
         camembert.calorieСontent = 299
@@ -307,6 +262,7 @@ struct StorageFood {
         camembert.protein = 20.0
         camembert.fat = 24.0
         camembert.carbs = 0.5
+        camembert.category = .cheese
         
         var feta = Product()
         feta.name = "Feta"
@@ -315,13 +271,7 @@ struct StorageFood {
         feta.protein = 14.0
         feta.fat = 21.0
         feta.carbs = 4.1
-        
-        let cheeseCategory = CategoryProduct(name: "Cheese", products: [brieCheese, camembert, feta])
-        
-        return cheeseCategory
-    }
-    
-    func createEggsCategory() -> CategoryProduct {
+        feta.category = .cheese
         
         var rawEgg = Product()
         rawEgg.name = "Egg"
@@ -330,6 +280,7 @@ struct StorageFood {
         rawEgg.protein = 12.7
         rawEgg.fat = 10.9
         rawEgg.carbs =  0.7
+        rawEgg.category = .eggs
         
         var boiledEgg = Product()
         boiledEgg.name = "Egg"
@@ -338,14 +289,7 @@ struct StorageFood {
         boiledEgg.protein = 13.0
         boiledEgg.fat = 11.0
         boiledEgg.carbs = 1.1
-        
-        
-        let eggsCategory = CategoryProduct(name: "Eggs", products: [rawEgg, boiledEgg])
-        
-        return eggsCategory
-    }
-    
-    func createMilkCategory() -> CategoryProduct {
+        boiledEgg.category = .eggs
         
         var milk1 = Product()
         milk1.name = "Mолоко 3.2% Ферма"
@@ -354,123 +298,89 @@ struct StorageFood {
         milk1.protein = 2.8
         milk1.fat = 3.2
         milk1.carbs =  4.6
-    
-        let milkCategory = CategoryProduct(name: "Milk", products: [milk1])
+        milk1.category = .milk
         
-        return milkCategory
-    }
-    
-    func createMilkProductsCategory() -> CategoryProduct {
+        var cream = Product()
+        cream.name = "Вершки Сулянськi 33%"
+        cream.calorieСontent = 321
+        cream.weight = 100
+        cream.protein = 2.6
+        cream.fat = 33.0
+        cream.carbs =  3.1
+        cream.category = .dairyProducts
         
-        var product1 = Product()
-        product1.name = "Вершки Сулянськi 33%"
-        product1.calorieСontent = 321
-        product1.weight = 100
-        product1.protein = 2.6
-        product1.fat = 33.0
-        product1.carbs =  3.1
- 
-        var product2 = Product()
-        product2.name = "Сметаеа Простоквашино 25%"
-        product2.calorieСontent = 245
-        product2.weight = 100
-        product2.protein = 2.4
-        product2.fat = 25.0
-        product2.carbs =  2.7
+        var sourCream = Product()
+        sourCream.name = "Сметана Простоквашино 25%"
+        sourCream.calorieСontent = 245
+        sourCream.weight = 100
+        sourCream.protein = 2.4
+        sourCream.fat = 25.0
+        sourCream.carbs =  2.7
+        sourCream.category = .dairyProducts
         
-        var product3 = Product()
-        product3.name = "Творог Белоцерковсъкпй 0%"
-        product3.calorieСontent = 79
-        product3.weight = 100
-        product3.protein = 18.0
-        product3.fat = 0.0
-        product3.carbs =  1.8
+        var cottageСheese = Product()
+        cottageСheese.name = "Творог Белоцерковсъкпй 0%"
+        cottageСheese.calorieСontent = 79
+        cottageСheese.weight = 100
+        cottageСheese.protein = 18.0
+        cottageСheese.fat = 0.0
+        cottageСheese.carbs =  1.8
+        cottageСheese.category = .dairyProducts
         
-        let milkProducts = CategoryProduct(name: "Milk Products", products: [product1, product2, product3])
+        var mushroom1 = Product()
+        mushroom1.name = "White button mushroom"
+        mushroom1.calorieСontent = 27
+        mushroom1.weight = 100
+        mushroom1.protein = 4.3
+        mushroom1.fat = 1.0
+        mushroom1.carbs =  0.1
+        mushroom1.category = .mushroom
         
-        return milkProducts
-    }
-    
-    func createMashroomsCategory() -> CategoryProduct {
+        var mushroom = Product()
+        mushroom.name = "Crimini mushroom"
+        mushroom.calorieСontent = 22
+        mushroom.weight = 100
+        mushroom.protein = 3.1
+        mushroom.fat = 0.3
+        mushroom.carbs =  3.3
+        mushroom.category = .mushroom
         
-        var product1 = Product()
-        product1.name = "White button mushroom"
-        product1.calorieСontent = 27
-        product1.weight = 100
-        product1.protein = 4.3
-        product1.fat = 1.0
-        product1.carbs =  0.1
+        var pistachios = Product()
+        pistachios.name = "Pistachios"
+        pistachios.calorieСontent = 562
+        pistachios.weight = 100
+        pistachios.protein = 20.0
+        pistachios.fat = 45.0
+        pistachios.carbs =  28.0
+        pistachios.category = .nuts
         
-        var product2 = Product()
-        product2.name = "Crimini mushroom"
-        product2.calorieСontent = 22
-        product2.weight = 100
-        product2.protein = 3.1
-        product2.fat = 0.3
-        product2.carbs =  3.3
-       
-        let mashroomsCategory = CategoryProduct(name: "Mashrooms", products: [product1, product2])
+        var hazelnuts = Product()
+        hazelnuts.name = "Hazelnuts"
+        hazelnuts.calorieСontent = 628
+        hazelnuts.weight = 100
+        hazelnuts.protein = 15.0
+        hazelnuts.fat = 61.0
+        hazelnuts.carbs =  17.0
+        hazelnuts.category = .nuts
         
-        return mashroomsCategory
-    }
-    
-    func createNutsCategory() -> CategoryProduct {
+        var coconutOil = Product()
+        coconutOil.name = "Coconut Oil"
+        coconutOil.calorieСontent = 899.3
+        coconutOil.weight = 100
+        coconutOil.protein = 0.8
+        coconutOil.fat = 94.9
+        coconutOil.carbs =  4.3
+        coconutOil.category = .fatOil
         
-        var product1 = Product()
-        product1.name = "Pistachios"
-        product1.calorieСontent = 562
-        product1.weight = 100
-        product1.protein = 20.0
-        product1.fat = 45.0
-        product1.carbs =  28.0
+        var oliveOil = Product()
+        oliveOil.name = "Olive Oil"
+        oliveOil.calorieСontent = 900
+        oliveOil.weight = 100
+        oliveOil.protein = 0.0
+        oliveOil.fat = 100.0
+        oliveOil.carbs =  0.0
+        oliveOil.category = .fatOil
         
-        var product2 = Product()
-        product2.name = "Hazelnuts"
-        product2.calorieСontent = 628
-        product2.weight = 100
-        product2.protein = 15.0
-        product2.fat = 61.0
-        product2.carbs =  17.0
-        
-        let nutsCategory = CategoryProduct(name: "Nuts", products: [product1, product2])
-        
-        return nutsCategory
-    }
-    
-    func createFatOilCategory() -> CategoryProduct {
-        
-        var product1 = Product()
-        product1.name = "Coconut Oil"
-        product1.calorieСontent = 899.3
-        product1.weight = 100
-        product1.protein = 0.8
-        product1.fat = 94.9
-        product1.carbs =  4.3
-        
-        var product2 = Product()
-        product2.name = "Olive Oil"
-        product2.calorieСontent = 900
-        product2.weight = 100
-        product2.protein = 0.0
-        product2.fat = 100.0
-        product2.carbs =  0.0
-        
-        let fatOilCategory = CategoryProduct(name: "Fat/Oil", products: [product1, product2])
-        
-        return fatOilCategory
-    }
-    
-    func createJuiceCategory() -> CategoryProduct {
-        
-        let juiseFreshCategory = CategoryProduct(name: "Juice/Fresh", products: [])
-        
-        return juiseFreshCategory
-    }
-    
-    func createOtherCategory() -> CategoryProduct {
-        
-        let otherCategory = CategoryProduct(name: "Other Products", products: [])
-        
-        return otherCategory
+        return [oliveOil, coconutOil, hazelnuts, pistachios, mushroom, mushroom1, cottageСheese, sourCream, cream, milk1, boiledEgg, rawEgg, feta, camembert, brieCheese, mussels, squid, shrimp, riceFlour, ryeFlour, wheatFlour, seaBass, tuna, forel, salmon, buckwheat, brawnRice, rice, oatmeal, grapefruit, kiwi, orange, banana, cabbage, squash, tomato, cucumber, chicken, veal, pork, beef]
     }
 }

@@ -8,21 +8,35 @@
 
 import Foundation
 
-
 struct Product {
     var name: String?
     var calorieСontent: Double?
     var weight: Double?
     var fat: Double?
     var protein: Double?
-    var carbs: Double??
+    var carbs: Double?
+    var category: ProductCategory?
 }
 
+enum ProductCategory {
+    
+    case meat
+    case vegetables
+    case fruit
+    case groats
+    case fish
+    case flour
+    case seaFood
+    case cheese
+    case eggs
+    case milk
+    case dairyProducts
+    case mushroom
+    case nuts
+    case fatOil
+    case juice
+    case other
+    case none
 
-struct CategoryProduct {
-    
-    var name: String?
-    var products: [Product]?
-    
 }
 
