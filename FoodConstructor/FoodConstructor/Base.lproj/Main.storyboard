@@ -180,7 +180,59 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oja-Iy-VuS">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name (brand)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ske-oy-Ifm">
+                                                <rect key="frame" x="20" y="15" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4G8-Q5-d7A">
+                                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hr-VY-IPJ">
+                                                <rect key="frame" x="20" y="162" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Carbohydrates" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHQ-eA-z2P">
+                                                <rect key="frame" x="20" y="211" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Protein" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z9A-uH-8yk">
+                                                <rect key="frame" x="20" y="260" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calories" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPi-Xt-LYW">
+                                                <rect key="frame" x="20" y="113" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="z9A-uH-8yk" firstAttribute="top" secondItem="QHQ-eA-z2P" secondAttribute="bottom" constant="15" id="6l1-5P-LSx"/>
+                                            <constraint firstItem="Ske-oy-Ifm" firstAttribute="leading" secondItem="Oja-Iy-VuS" secondAttribute="leading" constant="20" id="Bpd-dh-ZT8"/>
+                                            <constraint firstItem="4G8-Q5-d7A" firstAttribute="leading" secondItem="Ske-oy-Ifm" secondAttribute="leading" id="CoK-Wd-DRE"/>
+                                            <constraint firstItem="9Hr-VY-IPJ" firstAttribute="leading" secondItem="jPi-Xt-LYW" secondAttribute="leading" id="GZI-Mm-cFX"/>
+                                            <constraint firstItem="9Hr-VY-IPJ" firstAttribute="trailing" secondItem="jPi-Xt-LYW" secondAttribute="trailing" id="IhH-15-hYN"/>
+                                            <constraint firstItem="4G8-Q5-d7A" firstAttribute="top" secondItem="Ske-oy-Ifm" secondAttribute="bottom" constant="15" id="Kqw-nT-HWS"/>
+                                            <constraint firstItem="QHQ-eA-z2P" firstAttribute="top" secondItem="9Hr-VY-IPJ" secondAttribute="bottom" constant="15" id="RQr-o7-y0N"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ske-oy-Ifm" secondAttribute="trailing" constant="20" id="RhX-HW-Gg0"/>
+                                            <constraint firstItem="QHQ-eA-z2P" firstAttribute="leading" secondItem="9Hr-VY-IPJ" secondAttribute="leading" id="Sda-C4-5tB"/>
+                                            <constraint firstItem="Ske-oy-Ifm" firstAttribute="top" secondItem="Oja-Iy-VuS" secondAttribute="top" constant="15" id="W0C-Fr-bgm"/>
+                                            <constraint firstItem="4G8-Q5-d7A" firstAttribute="trailing" secondItem="Ske-oy-Ifm" secondAttribute="trailing" id="Wk3-LV-eMo"/>
+                                            <constraint firstItem="QHQ-eA-z2P" firstAttribute="trailing" secondItem="9Hr-VY-IPJ" secondAttribute="trailing" id="cEC-GH-lon"/>
+                                            <constraint firstItem="jPi-Xt-LYW" firstAttribute="trailing" secondItem="4G8-Q5-d7A" secondAttribute="trailing" id="f7i-7F-1wH"/>
+                                            <constraint firstItem="jPi-Xt-LYW" firstAttribute="top" secondItem="4G8-Q5-d7A" secondAttribute="bottom" constant="15" id="uSS-9R-k2e"/>
+                                            <constraint firstItem="z9A-uH-8yk" firstAttribute="trailing" secondItem="QHQ-eA-z2P" secondAttribute="trailing" id="vXG-H0-vU1"/>
+                                            <constraint firstItem="9Hr-VY-IPJ" firstAttribute="top" secondItem="jPi-Xt-LYW" secondAttribute="bottom" constant="15" id="xFQ-Kc-AAW"/>
+                                            <constraint firstItem="jPi-Xt-LYW" firstAttribute="leading" secondItem="4G8-Q5-d7A" secondAttribute="leading" id="xrP-nu-ISL"/>
+                                            <constraint firstItem="z9A-uH-8yk" firstAttribute="leading" secondItem="QHQ-eA-z2P" secondAttribute="leading" id="ysf-Uf-ggO"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -203,6 +255,14 @@
                         <viewLayoutGuide key="safeArea" id="YN6-7E-yBN"/>
                     </view>
                     <navigationItem key="navigationItem" id="dP0-Fs-bql"/>
+                    <connections>
+                        <outlet property="caloriesTextField" destination="jPi-Xt-LYW" id="jW9-Xo-kB4"/>
+                        <outlet property="carbohydratesTextField" destination="QHQ-eA-z2P" id="kxP-h0-RLB"/>
+                        <outlet property="fatTextField" destination="9Hr-VY-IPJ" id="TNK-eZ-cxN"/>
+                        <outlet property="productAmountTextField" destination="4G8-Q5-d7A" id="Wnp-hb-V9b"/>
+                        <outlet property="productNameTextField" destination="Ske-oy-Ifm" id="jjy-91-mku"/>
+                        <outlet property="proteinTextField" destination="z9A-uH-8yk" id="cgW-sO-RrY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ur-Cy-qbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

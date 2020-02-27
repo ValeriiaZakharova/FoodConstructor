@@ -9,11 +9,18 @@
 import UIKit
 
 class AddNewProductViewController: UIViewController {
+    
+    @IBOutlet weak var productNameTextField: UITextField!
+    @IBOutlet weak var productAmountTextField: UITextField!
+    @IBOutlet weak var caloriesTextField: UITextField!
+    @IBOutlet weak var fatTextField: UITextField!
+    @IBOutlet weak var carbohydratesTextField: UITextField!
+    @IBOutlet weak var proteinTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
  
 }
