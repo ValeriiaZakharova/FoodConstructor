@@ -1,5 +1,5 @@
 //
-//  FoodListViewController.swift
+//  ProductListViewController.swift
 //  FoodConstructor
 //
 //  Created by Valeriia Zakharova on 26.02.2020.
@@ -8,19 +8,23 @@
 
 import UIKit
 
-class FoodListViewController: UIViewController {
+class ProductListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
     @IBOutlet private weak var doneButton: UIButton!
     
+    @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
+    
     var products: [Product] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
+        setUPBarButtons()
+        
         toggleButton(enabled: false)
-
+        
         tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
         products = StorageProduct().createProducts()
     }
@@ -50,15 +54,30 @@ class FoodListViewController: UIViewController {
             let selectedRows = products[indexPath.row]
             newProducts.append(selectedRows)
         }
-       
+        
         (navigationController?.viewControllers[1] as! CreateMealViewController).products.append(contentsOf: newProducts)
         navigationController?.popViewController(animated: true)
+    }
+    
+    func setUPBarButtons() {
+
+        let filter = UIBarButtonItem(title: "Filter", style: .done, target: self, action: #selector(filterTapped))
+        filter.tintColor = UIColor.black
+        
+        navigationItem.rightBarButtonItems = [addBarButtonItem, filter]
+    }
+    
+    @objc
+    func filterTapped() {
+      
+        
+        
     }
 }
 
 // MARK: - TableViewDelegate
 
-extension FoodListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
@@ -87,7 +106,6 @@ extension FoodListViewController: UITableViewDelegate, UITableViewDataSource {
         doneButton.isEnabled = enabled
         doneButton.alpha = enabled ? 1 : 0.5
     }
-    
 }
 
 

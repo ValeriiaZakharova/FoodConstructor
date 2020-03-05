@@ -38,7 +38,7 @@ class ProductCell: UITableViewCell {
         if let protein = product.protein {
             proteinLabel.text = String(protein)
         }
-        
+        categoryLabel.text = product.category.map { $0.rawValue } //ask dima about this
     }
 
 }

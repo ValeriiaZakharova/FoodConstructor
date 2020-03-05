@@ -54,7 +54,7 @@ class CreateNewProductViewController: UIViewController {
         carbohydratesTextField.delegate = self
         proteinTextField.delegate = self
         
-        products = (navigationController?.viewControllers[2] as! FoodListViewController).products
+        products = (navigationController?.viewControllers[2] as! ProductListViewController).products
         
         /// show Lera when it can cause problems in the nearest future
         subscribeKeyboardNotifications()
@@ -95,7 +95,7 @@ class CreateNewProductViewController: UIViewController {
             return
         }
         
-        (navigationController?.viewControllers[2] as! FoodListViewController).products.append(newProduct)
+        (navigationController?.viewControllers[2] as! ProductListViewController).products.append(newProduct)
         navigationController?.popViewController(animated: true)
     }
 
@@ -216,7 +216,6 @@ extension CreateNewProductViewController: UIPickerViewDataSource, UIPickerViewDe
         return categories[row].rawValue
     }
 }
-
 
 // MARK: - UITextFieldDelegate
 

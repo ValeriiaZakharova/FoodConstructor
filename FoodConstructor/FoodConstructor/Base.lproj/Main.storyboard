@@ -129,7 +129,7 @@
         <!--Products-->
         <scene sceneID="uv6-zK-zs0">
             <objects>
-                <viewController storyboardIdentifier="FoodListViewController" id="Hp1-nk-Vmb" customClass="FoodListViewController" customModule="FoodConstructor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductListViewController" id="Hp1-nk-Vmb" customClass="ProductListViewController" customModule="FoodConstructor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CT5-kj-yvQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +179,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="addBarButtonItem" destination="wG6-hh-N9K" id="t2Q-OA-suA"/>
                         <outlet property="doneButton" destination="ic1-cg-55X" id="f6U-cV-pgy"/>
                         <outlet property="tableView" destination="h8Y-gu-bQQ" id="Dft-P8-R1u"/>
                     </connections>
@@ -307,21 +308,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ur-Cy-qbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-738" y="1435"/>
-        </scene>
-        <!--Product Info View Controller-->
-        <scene sceneID="Aca-W5-wwv">
-            <objects>
-                <viewController storyboardIdentifier="ProductInfoViewController" id="pY0-zD-3uc" customClass="ProductInfoViewController" customModule="FoodConstructor" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gU6-Uo-KyR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Efl-vx-gsb"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E5f-Nk-Rhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="32" y="1435"/>
         </scene>
         <!--Profile-->
         <scene sceneID="UTX-u7-z8z">
@@ -531,6 +517,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGt-SY-Tet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2204" y="1434"/>
+        </scene>
+        <!--Products-->
+        <scene sceneID="cFH-WE-iKf">
+            <objects>
+                <viewController id="ahx-3F-K7h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BF8-ou-Kfg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="EFx-QX-i2I"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Products" id="nrC-Za-ECc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="61z-RJ-NhZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ive-Nl-LPt">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="414" height="896"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anE-wJ-dSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="1446"/>
         </scene>
     </scenes>
 </document>

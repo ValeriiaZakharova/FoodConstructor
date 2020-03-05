@@ -41,7 +41,7 @@ class CreateMealViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func didTapAddProduct(_ sender: Any) {
-        /// open FoodListViewController
+        /// open ProductListViewController
     }
     
     @IBAction func didTapSaveMeal(_ sender: Any) {
