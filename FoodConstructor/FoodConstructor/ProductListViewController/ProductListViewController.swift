@@ -60,7 +60,7 @@ class ProductListViewController: UIViewController {
     }
     
     func setUPBarButtons() {
-
+        
         let filter = UIBarButtonItem(title: "Filter", style: .done, target: self, action: #selector(filterTapped))
         filter.tintColor = UIColor.black
         
@@ -69,9 +69,10 @@ class ProductListViewController: UIViewController {
     
     @objc
     func filterTapped() {
-      
+        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboardMain.instantiateViewController(identifier: "ProductFilterViewController") as! ProductFilterViewController
         
-        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

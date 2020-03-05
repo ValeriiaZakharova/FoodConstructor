@@ -26,6 +26,7 @@
 		CF423AF5240ED3FD00FFAB12 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF423AF3240ED3FD00FFAB12 /* ProductCell.xib */; };
 		CF4FFBB3240FCF060081FDD4 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFBB2240FCF060081FDD4 /* MealDetailViewController.swift */; };
 		CF4FFBB5241133220081FDD4 /* CreateNewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFBB4241133220081FDD4 /* CreateNewProductViewController.swift */; };
+		CF4FFBB8241148EC0081FDD4 /* ProductFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFBB7241148EC0081FDD4 /* ProductFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		CF423AF3240ED3FD00FFAB12 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		CF4FFBB2240FCF060081FDD4 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		CF4FFBB4241133220081FDD4 /* CreateNewProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewProductViewController.swift; sourceTree = "<group>"; };
+		CF4FFBB7241148EC0081FDD4 /* ProductFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				CF4FFBB1240FCED20081FDD4 /* MealDetailViewController */,
 				CF423AEE240E92C600FFAB12 /* CreateMealViewController */,
 				CF423ADA2406928A00FFAB12 /* ProductListViewController */,
+				CF4FFBB62411480E0081FDD4 /* ProductFilterViewController */,
 				CF423AE02406B75100FFAB12 /* CreateNewProductViewController */,
 				CF423AB92404FB9200FFAB12 /* AppDelegate.swift */,
 				CF423ABB2404FB9200FFAB12 /* SceneDelegate.swift */,
@@ -186,6 +189,14 @@
 			path = MealDetailViewController;
 			sourceTree = "<group>";
 		};
+		CF4FFBB62411480E0081FDD4 /* ProductFilterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF4FFBB7241148EC0081FDD4 /* ProductFilterViewController.swift */,
+			);
+			path = ProductFilterViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +277,7 @@
 				CF423AEC240E84E200FFAB12 /* MealCell.swift in Sources */,
 				CF423ABC2404FB9200FFAB12 /* SceneDelegate.swift in Sources */,
 				CF423AE8240E847C00FFAB12 /* MealsListViewController.swift in Sources */,
+				CF4FFBB8241148EC0081FDD4 /* ProductFilterViewController.swift in Sources */,
 				CF423AF0240E92FC00FFAB12 /* CreateMealViewController.swift in Sources */,
 				CF423AD72405A31A00FFAB12 /* StorageMeal.swift in Sources */,
 				CF423AD52405A2FE00FFAB12 /* MealModel.swift in Sources */,

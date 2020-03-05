@@ -521,7 +521,7 @@
         <!--Products-->
         <scene sceneID="cFH-WE-iKf">
             <objects>
-                <viewController id="ahx-3F-K7h" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductFilterViewController" id="ahx-3F-K7h" customClass="ProductFilterViewController" customModule="FoodConstructor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BF8-ou-Kfg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anE-wJ-dSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="1446"/>
+            <point key="canvasLocation" x="62" y="1434"/>
         </scene>
     </scenes>
 </document>
