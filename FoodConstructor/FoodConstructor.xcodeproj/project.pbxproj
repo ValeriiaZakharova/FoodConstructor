@@ -13,14 +13,19 @@
 		CF423AC12404FB9200FFAB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF423ABF2404FB9200FFAB12 /* Main.storyboard */; };
 		CF423AC32404FB9800FFAB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF423AC22404FB9800FFAB12 /* Assets.xcassets */; };
 		CF423AC62404FB9800FFAB12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF423AC42404FB9800FFAB12 /* LaunchScreen.storyboard */; };
-		CF423AD124053FC000FFAB12 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD024053FC000FFAB12 /* FoodModel.swift */; };
+		CF423AD124053FC000FFAB12 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD024053FC000FFAB12 /* ProductModel.swift */; };
 		CF423AD3240541A900FFAB12 /* StorageFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD2240541A900FFAB12 /* StorageFood.swift */; };
 		CF423AD52405A2FE00FFAB12 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD42405A2FE00FFAB12 /* MealModel.swift */; };
 		CF423AD72405A31A00FFAB12 /* StorageMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD62405A31A00FFAB12 /* StorageMeal.swift */; };
 		CF423AD92406915E00FFAB12 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AD82406915E00FFAB12 /* FoodListViewController.swift */; };
-		CF423ADE2406953900FFAB12 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423ADC2406953900FFAB12 /* FoodCell.swift */; };
-		CF423ADF2406953900FFAB12 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF423ADD2406953900FFAB12 /* FoodCell.xib */; };
-		CF423AE22406B78C00FFAB12 /* AddNewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AE12406B78C00FFAB12 /* AddNewProductViewController.swift */; };
+		CF423AE8240E847C00FFAB12 /* MealsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AE7240E847C00FFAB12 /* MealsListViewController.swift */; };
+		CF423AEC240E84E200FFAB12 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AEA240E84E200FFAB12 /* MealCell.swift */; };
+		CF423AED240E84E200FFAB12 /* MealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF423AEB240E84E200FFAB12 /* MealCell.xib */; };
+		CF423AF0240E92FC00FFAB12 /* CreateMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AEF240E92FC00FFAB12 /* CreateMealViewController.swift */; };
+		CF423AF4240ED3FD00FFAB12 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF423AF2240ED3FD00FFAB12 /* ProductCell.swift */; };
+		CF423AF5240ED3FD00FFAB12 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF423AF3240ED3FD00FFAB12 /* ProductCell.xib */; };
+		CF4FFBB3240FCF060081FDD4 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFBB2240FCF060081FDD4 /* MealDetailViewController.swift */; };
+		CF4FFBB5241133220081FDD4 /* CreateNewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFBB4241133220081FDD4 /* CreateNewProductViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +37,19 @@
 		CF423AC22404FB9800FFAB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF423AC52404FB9800FFAB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF423AC72404FB9800FFAB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF423AD024053FC000FFAB12 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		CF423AD024053FC000FFAB12 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		CF423AD2240541A900FFAB12 /* StorageFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFood.swift; sourceTree = "<group>"; };
 		CF423AD42405A2FE00FFAB12 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		CF423AD62405A31A00FFAB12 /* StorageMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMeal.swift; sourceTree = "<group>"; };
 		CF423AD82406915E00FFAB12 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
-		CF423ADC2406953900FFAB12 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
-		CF423ADD2406953900FFAB12 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
-		CF423AE12406B78C00FFAB12 /* AddNewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductViewController.swift; sourceTree = "<group>"; };
+		CF423AE7240E847C00FFAB12 /* MealsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListViewController.swift; sourceTree = "<group>"; };
+		CF423AEA240E84E200FFAB12 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
+		CF423AEB240E84E200FFAB12 /* MealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
+		CF423AEF240E92FC00FFAB12 /* CreateMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMealViewController.swift; sourceTree = "<group>"; };
+		CF423AF2240ED3FD00FFAB12 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		CF423AF3240ED3FD00FFAB12 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		CF4FFBB2240FCF060081FDD4 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		CF4FFBB4241133220081FDD4 /* CreateNewProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +82,12 @@
 		CF423AB82404FB9200FFAB12 /* FoodConstructor */ = {
 			isa = PBXGroup;
 			children = (
-				CF423AE02406B75100FFAB12 /* AddNewProductViewController */,
-				CF423ADA2406928A00FFAB12 /* FoodListViewController */,
 				CF423ACD24050B5F00FFAB12 /*  Models */,
+				CF423AE6240E845600FFAB12 /* MealsViewController */,
+				CF4FFBB1240FCED20081FDD4 /* MealDetailViewController */,
+				CF423AEE240E92C600FFAB12 /* CreateMealViewController */,
+				CF423ADA2406928A00FFAB12 /* FoodListViewController */,
+				CF423AE02406B75100FFAB12 /* CreateNewProductViewController */,
 				CF423AB92404FB9200FFAB12 /* AppDelegate.swift */,
 				CF423ABB2404FB9200FFAB12 /* SceneDelegate.swift */,
 				CF423ABD2404FB9200FFAB12 /* ViewController.swift */,
@@ -89,19 +102,19 @@
 		CF423ACD24050B5F00FFAB12 /*  Models */ = {
 			isa = PBXGroup;
 			children = (
-				CF423ACE24053F5700FFAB12 /* FoodModel */,
+				CF423ACE24053F5700FFAB12 /* ProductModel */,
 				CF423ACF24053F7600FFAB12 /* MealModel */,
 			);
 			path = " Models";
 			sourceTree = "<group>";
 		};
-		CF423ACE24053F5700FFAB12 /* FoodModel */ = {
+		CF423ACE24053F5700FFAB12 /* ProductModel */ = {
 			isa = PBXGroup;
 			children = (
-				CF423AD024053FC000FFAB12 /* FoodModel.swift */,
+				CF423AD024053FC000FFAB12 /* ProductModel.swift */,
 				CF423AD2240541A900FFAB12 /* StorageFood.swift */,
 			);
-			path = FoodModel;
+			path = ProductModel;
 			sourceTree = "<group>";
 		};
 		CF423ACF24053F7600FFAB12 /* MealModel */ = {
@@ -116,27 +129,61 @@
 		CF423ADA2406928A00FFAB12 /* FoodListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CF423ADB2406950F00FFAB12 /* foodCell */,
 				CF423AD82406915E00FFAB12 /* FoodListViewController.swift */,
 			);
 			path = FoodListViewController;
 			sourceTree = "<group>";
 		};
-		CF423ADB2406950F00FFAB12 /* foodCell */ = {
+		CF423AE02406B75100FFAB12 /* CreateNewProductViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CF423ADC2406953900FFAB12 /* FoodCell.swift */,
-				CF423ADD2406953900FFAB12 /* FoodCell.xib */,
+				CF4FFBB4241133220081FDD4 /* CreateNewProductViewController.swift */,
 			);
-			path = foodCell;
+			path = CreateNewProductViewController;
 			sourceTree = "<group>";
 		};
-		CF423AE02406B75100FFAB12 /* AddNewProductViewController */ = {
+		CF423AE6240E845600FFAB12 /* MealsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CF423AE12406B78C00FFAB12 /* AddNewProductViewController.swift */,
+				CF423AE9240E84C800FFAB12 /* MealCell */,
+				CF423AE7240E847C00FFAB12 /* MealsListViewController.swift */,
 			);
-			path = AddNewProductViewController;
+			path = MealsViewController;
+			sourceTree = "<group>";
+		};
+		CF423AE9240E84C800FFAB12 /* MealCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF423AEA240E84E200FFAB12 /* MealCell.swift */,
+				CF423AEB240E84E200FFAB12 /* MealCell.xib */,
+			);
+			path = MealCell;
+			sourceTree = "<group>";
+		};
+		CF423AEE240E92C600FFAB12 /* CreateMealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF423AF1240ED3DB00FFAB12 /* ProductCell */,
+				CF423AEF240E92FC00FFAB12 /* CreateMealViewController.swift */,
+			);
+			path = CreateMealViewController;
+			sourceTree = "<group>";
+		};
+		CF423AF1240ED3DB00FFAB12 /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF423AF2240ED3FD00FFAB12 /* ProductCell.swift */,
+				CF423AF3240ED3FD00FFAB12 /* ProductCell.xib */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		CF4FFBB1240FCED20081FDD4 /* MealDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF4FFBB2240FCF060081FDD4 /* MealDetailViewController.swift */,
+			);
+			path = MealDetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF423AC62404FB9800FFAB12 /* LaunchScreen.storyboard in Resources */,
-				CF423ADF2406953900FFAB12 /* FoodCell.xib in Resources */,
+				CF423AED240E84E200FFAB12 /* MealCell.xib in Resources */,
+				CF423AF5240ED3FD00FFAB12 /* ProductCell.xib in Resources */,
 				CF423AC32404FB9800FFAB12 /* Assets.xcassets in Resources */,
 				CF423AC12404FB9200FFAB12 /* Main.storyboard in Resources */,
 			);
@@ -212,15 +260,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF423ABE2404FB9200FFAB12 /* ViewController.swift in Sources */,
-				CF423AD124053FC000FFAB12 /* FoodModel.swift in Sources */,
+				CF423AD124053FC000FFAB12 /* ProductModel.swift in Sources */,
 				CF423AD92406915E00FFAB12 /* FoodListViewController.swift in Sources */,
 				CF423ABA2404FB9200FFAB12 /* AppDelegate.swift in Sources */,
+				CF423AEC240E84E200FFAB12 /* MealCell.swift in Sources */,
 				CF423ABC2404FB9200FFAB12 /* SceneDelegate.swift in Sources */,
+				CF423AE8240E847C00FFAB12 /* MealsListViewController.swift in Sources */,
+				CF423AF0240E92FC00FFAB12 /* CreateMealViewController.swift in Sources */,
 				CF423AD72405A31A00FFAB12 /* StorageMeal.swift in Sources */,
 				CF423AD52405A2FE00FFAB12 /* MealModel.swift in Sources */,
-				CF423ADE2406953900FFAB12 /* FoodCell.swift in Sources */,
+				CF4FFBB3240FCF060081FDD4 /* MealDetailViewController.swift in Sources */,
+				CF423AF4240ED3FD00FFAB12 /* ProductCell.swift in Sources */,
 				CF423AD3240541A900FFAB12 /* StorageFood.swift in Sources */,
-				CF423AE22406B78C00FFAB12 /* AddNewProductViewController.swift in Sources */,
+				CF4FFBB5241133220081FDD4 /* CreateNewProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

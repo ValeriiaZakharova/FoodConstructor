@@ -9,22 +9,10 @@
 import Foundation
 
 struct Meal {
-    var name: String?
-    var food: [Product]?
-    
+    var title: String?
+    var description: String?
+    var products: [Product]?
 }
 
 
-struct DayMealPlan {
-    
-    var name: String?
-    var meals: [Meal]?
-    
-}
 
-struct WeekMealPlan {
-    
-    var name: String?
-    var days: [DayMealPlan]?
-    
-}

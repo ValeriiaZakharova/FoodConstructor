@@ -18,8 +18,7 @@ struct Product {
     var category: ProductCategory?
 }
 
-enum ProductCategory {
-    
+enum ProductCategory: String, CaseIterable {
     case meat
     case vegetables
     case fruit
@@ -36,7 +35,4 @@ enum ProductCategory {
     case fatOil
     case juice
     case other
-    case none
-
 }
-
