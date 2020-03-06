@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  ProductFilterViewController.swift
 //  FoodConstructor
 //
-//  Created by Valeriia Zakharova on 25.02.2020.
+//  Created by Valeriia Zakharova on 05.03.2020.
 //  Copyright © 2020 Valeriia Zakharova. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ProductFilterViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
-
-
+  
 }
-
