@@ -16,19 +16,22 @@ class ProductListViewController: UIViewController {
     
     @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    private let searchController = UISearchController()
     
     var products: [Product] = []
     
+    private var filteredProducts: [Product] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUPBarButtons()
+        setUpBarButtons()
+        setupSearchBar()
         
         toggleButton(enabled: false)
         
         tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
         products = StorageProduct().createProducts()
+        filteredProducts = products
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,14 +64,6 @@ class ProductListViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func setUPBarButtons() {
-        
-        let filter = UIBarButtonItem(title: "Filter", style: .done, target: self, action: #selector(filterTapped))
-        filter.tintColor = UIColor.black
-        
-        navigationItem.rightBarButtonItems = [addBarButtonItem, filter]
-    }
-    
     @objc
     func filterTapped() {
         let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
@@ -83,13 +78,13 @@ class ProductListViewController: UIViewController {
 extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        return filteredProducts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
-        cell.updateProductCell(product: products[indexPath.row])
+        cell.updateProductCell(product: filteredProducts[indexPath.row])
         
         return cell
     }
@@ -112,3 +107,40 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 
+private extension ProductListViewController {
+    
+    func setupSearchBar() {
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+    }
+    
+    func setUpBarButtons() {
+        
+        let filter = UIBarButtonItem(title: "Filter", style: .done, target: self, action: #selector(filterTapped))
+        filter.tintColor = UIColor.black
+        
+        navigationItem.rightBarButtonItems = [addBarButtonItem, filter]
+    }
+    
+    func updateFilteredProducts() {
+        guard let searchText = searchController.searchBar.text?.lowercased(), searchText.count > 0 else {
+            filteredProducts = products
+            tableView.reloadData()
+            return
+        }
+        
+        filteredProducts = products.filter({ (product) -> Bool in
+            return product.name?.lowercased().contains(searchText) == true
+        })
+        
+        tableView.reloadData()
+    }
+    
+}
+
+extension ProductListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        updateFilteredProducts()
+    }
+}

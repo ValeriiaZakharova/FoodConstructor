@@ -135,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h8Y-gu-bQQ">
-                                <rect key="frame" x="0.0" y="148" width="414" height="625"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Hp1-nk-Vmb" id="3IE-zR-tPg"/>
@@ -155,22 +155,14 @@
                                     <action selector="didTapAddSelectedProducts:" destination="Hp1-nk-Vmb" eventType="touchUpInside" id="wAu-xe-34R"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" placeholder="What do you want to find?" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-Tr-Fq6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="QW9-6x-ioh" firstAttribute="trailing" secondItem="h8Y-gu-bQQ" secondAttribute="trailing" id="4Ad-js-2Ex"/>
                             <constraint firstItem="QW9-6x-ioh" firstAttribute="trailing" secondItem="ic1-cg-55X" secondAttribute="trailing" id="7a7-HC-guq"/>
-                            <constraint firstItem="JLv-Tr-Fq6" firstAttribute="leading" secondItem="QW9-6x-ioh" secondAttribute="leading" id="FI9-af-OdT"/>
                             <constraint firstItem="h8Y-gu-bQQ" firstAttribute="leading" secondItem="QW9-6x-ioh" secondAttribute="leading" id="HzB-kl-TyT"/>
-                            <constraint firstItem="JLv-Tr-Fq6" firstAttribute="trailing" secondItem="QW9-6x-ioh" secondAttribute="trailing" id="Wil-7N-Kb9"/>
-                            <constraint firstItem="h8Y-gu-bQQ" firstAttribute="top" secondItem="QW9-6x-ioh" secondAttribute="top" constant="60" id="aXE-op-2uJ"/>
-                            <constraint firstItem="h8Y-gu-bQQ" firstAttribute="top" secondItem="JLv-Tr-Fq6" secondAttribute="bottom" id="fXi-IO-VFK"/>
+                            <constraint firstItem="h8Y-gu-bQQ" firstAttribute="top" secondItem="QW9-6x-ioh" secondAttribute="top" id="aXE-op-2uJ"/>
                             <constraint firstItem="ic1-cg-55X" firstAttribute="leading" secondItem="QW9-6x-ioh" secondAttribute="leading" id="ion-mu-4ma"/>
-                            <constraint firstItem="JLv-Tr-Fq6" firstAttribute="top" secondItem="QW9-6x-ioh" secondAttribute="top" id="msu-JP-EQP"/>
                             <constraint firstItem="QW9-6x-ioh" firstAttribute="bottom" secondItem="ic1-cg-55X" secondAttribute="bottom" id="n4k-hK-Z5Q"/>
                             <constraint firstItem="ic1-cg-55X" firstAttribute="top" secondItem="h8Y-gu-bQQ" secondAttribute="bottom" id="qg2-5z-6jS"/>
                         </constraints>
@@ -189,7 +181,6 @@
                     <connections>
                         <outlet property="addBarButtonItem" destination="wG6-hh-N9K" id="t2Q-OA-suA"/>
                         <outlet property="doneButton" destination="ic1-cg-55X" id="f6U-cV-pgy"/>
-                        <outlet property="searchBar" destination="JLv-Tr-Fq6" id="N0f-i5-lCd"/>
                         <outlet property="tableView" destination="h8Y-gu-bQQ" id="Dft-P8-R1u"/>
                     </connections>
                 </viewController>
