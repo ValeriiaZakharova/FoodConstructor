@@ -26,6 +26,8 @@ class ProductListViewController: UIViewController {
     
     private var filteredProducts: [Product] = []
     
+    private var selectedProducts: [Product] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBarButtons()
@@ -46,20 +48,22 @@ class ProductListViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func didTapAddSelectedProducts(_ sender: Any) {
+//
+//        /// show alert when no cells were choosen
+//
+//        guard let indexPaths = tableView.indexPathsForSelectedRows else {
+//            return
+//        }
+//        var newProducts: [Product]  = []
+//
+//        for indexPath in indexPaths {
+//            let selectedProduct = products[indexPath.row]
+//            newProducts.append(selectedProduct)
+//        }
         
-        /// show alert when no cells were choosen
         
-        guard let indexPaths = tableView.indexPathsForSelectedRows else {
-            return
-        }
-        var newProducts: [Product]  = []
         
-        for indexPath in indexPaths {
-            let selectedRows = products[indexPath.row]
-            newProducts.append(selectedRows)
-        }
-        
-        (navigationController?.viewControllers[1] as! CreateMealViewController).products.append(contentsOf: newProducts)
+        (navigationController?.viewControllers[1] as! CreateMealViewController).products.append(contentsOf: selectedProducts)
         navigationController?.popViewController(animated: true)
     }
     
@@ -82,18 +86,44 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // get product that is going to be displayed
+        let product = filteredProducts[indexPath.row]
+        
+        // check whether product contains in `selectedProducts` (it means that it was selected before)
+        let containsProductFlag = selectedProducts.contains { (elementProduct) -> Bool in
+            elementProduct.name == product.name
+        }
+        
+        // if so, tell table that cell at `indexPath` is selected by `selectRow(at: indexPath...`
+        if containsProductFlag == true {
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
-        cell.updateProductCell(product: filteredProducts[indexPath.row])
+        cell.updateProductCell(product: product)
         
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = filteredProducts[indexPath.row]
+        selectedProducts.append(product)
         toggleButton(enabled: true)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let unselectedProduct = filteredProducts[indexPath.row]
+        
+        // search for the index of the product that is going to be unselected
+        let index = selectedProducts.firstIndex { (product) -> Bool in
+            unselectedProduct.name == product.name
+        }
+        
+        // since we CANNOT remove `product` directly from the selectedProducts, we remove at found index
+        selectedProducts.remove(at: index!)
+        
+        
         if tableView.indexPathsForSelectedRows == nil {
             toggleButton(enabled: false)
         }
