@@ -18,7 +18,11 @@ class ProductListViewController: UIViewController {
     
     private let searchController = UISearchController()
     
-    var products: [Product] = []
+    var products: [Product] = [] {
+        didSet {
+            updateFilteredProducts()
+        }
+    }
     
     private var filteredProducts: [Product] = []
     
@@ -32,11 +36,6 @@ class ProductListViewController: UIViewController {
         tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
         products = StorageProduct().createProducts()
         filteredProducts = products
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
