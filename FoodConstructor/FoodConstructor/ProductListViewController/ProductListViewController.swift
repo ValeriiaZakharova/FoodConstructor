@@ -16,6 +16,8 @@ class ProductListViewController: UIViewController {
     
     @IBOutlet weak var addBarButtonItem: UIBarButtonItem!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var products: [Product] = []
     
     override func viewDidLoad() {

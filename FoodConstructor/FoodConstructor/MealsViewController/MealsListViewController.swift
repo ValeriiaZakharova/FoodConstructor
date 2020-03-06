@@ -78,6 +78,8 @@ extension MealsListViewController: UITableViewDelegate, UITableViewDataSource {
         let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboardMain.instantiateViewController(identifier: "MealDetailViewController") as! MealDetailViewController
         
+        vc.meal = meals[indexPath.row]
+        
         navigationController?.pushViewController(vc, animated: true)
     }
 }
